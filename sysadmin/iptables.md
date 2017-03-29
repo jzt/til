@@ -3,7 +3,7 @@
 ### Show all rules
 
 ```
-iptables --list-rules *chain*
+iptables --list-rules <chain>
 ```
 
 Options:
