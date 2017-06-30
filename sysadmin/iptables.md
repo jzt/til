@@ -9,6 +9,15 @@ iptables --list-rules <chain>
 Options:
 * list-rules - Print all rules (in chain)
 
+### Show all rules 
+
+```
+iptables -L -n -v
+```
+
+Options:
+* n - show numeric port numbers
+* v - verbose
 
 ### Allow ping
 
