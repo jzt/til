@@ -18,3 +18,9 @@ systemctl list-dependencies sshd.service
 ```
 systemd-analyze verify my.service
 ```
+
+### List jobs
+
+```
+systemctl list-jobs
+```
