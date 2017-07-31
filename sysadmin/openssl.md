@@ -17,3 +17,13 @@ openssl s_client -showcerts -connect <IP>:<port>
 ```
 openssl s_client -connect <IP>:<port> < /dev/null 2>/dev/null | openssl x509 -fingerprint -noout -in /dev/stdin
 ```
+
+### PEM to CRT
+```
+openssl x509 -outform der -in starkenterprises.io.cert.pem -out starkenterprises.io.crt
+```
+
+### PEM to PKCS8
+```
+openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in starkenterprises.io.key.pem -out starkenterprises.io.key.pkcs8
+```
