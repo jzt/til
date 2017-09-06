@@ -4,4 +4,6 @@
 
 ```
 vmtoolsd --cmd "info-get guestinfo.ovfenv"
+
+ovfenv dump
 ```
