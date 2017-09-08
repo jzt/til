@@ -12,3 +12,15 @@ gqG
 ```
 :%s/\s\+$//e
 ```
+
+### Set file format
+
+```
+:set ff=unix
+```
+
+### Replace ^M
+
+```
+:%s/\r//g
+```
