@@ -24,3 +24,12 @@ systemd-analyze verify my.service
 ```
 systemctl list-jobs
 ```
+
+### Debug
+
+Set `/etc/systemd/system/systemd-networkd.service.d/10-debug.conf`
+
+```
+[Service]
+Environment=SYSTEMD_LOG_LEVEL=debug
+```
