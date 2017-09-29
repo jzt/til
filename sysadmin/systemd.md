@@ -6,6 +6,12 @@
 systemctl list-units --state=failed
 ```
 
+### List units in progress
+
+```
+systemctl list-jobs
+```
+
 ### List dependencies
 
 Show dependencies (units required or wanted) to start the named unit. 
