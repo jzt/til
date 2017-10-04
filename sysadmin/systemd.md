@@ -36,7 +36,7 @@ Environment=SYSTEMD_LOG_LEVEL=debug
 
 ### Generate systemd graph
 ```
-# generate graph with dot:
+# generate graph with dot (sudo apt install -y graphviz):
 systemd-analyze dot > myfile
 cat myfile | dot -Tsvg > system.svg
 
