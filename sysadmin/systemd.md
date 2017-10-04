@@ -33,3 +33,13 @@ Set `/etc/systemd/system/systemd-networkd.service.d/10-debug.conf`
 [Service]
 Environment=SYSTEMD_LOG_LEVEL=debug
 ```
+
+### Generate systemd graph
+```
+# generate graph with dot:
+systemd-analyze dot > myfile
+cat myfile | dot -Tsvg > system.svg
+
+# graph one service
+systemd-analyze dot admiral_startup.service
+```
