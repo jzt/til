@@ -43,3 +43,9 @@ cat myfile | dot -Tsvg > system.svg
 # graph one service
 systemd-analyze dot admiral_startup.service
 ```
+
+
+### Show hostname info
+```
+hostnamectl
+```
