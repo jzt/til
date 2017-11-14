@@ -12,6 +12,12 @@ systemctl list-units --state=failed
 systemctl list-jobs
 ```
 
+### List enabled units
+
+```
+systemctl list-unit-files | grep enabled
+```
+
 ### List dependencies
 
 Show dependencies (units required or wanted) to start the named unit. 
