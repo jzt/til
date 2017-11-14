@@ -15,7 +15,7 @@ systemctl list-jobs
 ### List enabled units
 
 ```
-systemctl list-unit-files | grep enabled
+systemctl list-unit-files --state=enabled
 ```
 
 ### List dependencies
