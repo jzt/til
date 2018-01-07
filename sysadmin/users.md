@@ -30,3 +30,8 @@ groups
 ```
 id <username>
 ```
+
+### Set password for user
+```
+passwd <username>
+```
