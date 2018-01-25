@@ -13,6 +13,17 @@ govc option.ls config.vpxd.instanceName
 govc vm.info -json vm_name | jq '.' | cat > outfile
 ```
 
+### Find VM name by IP
+
+```
+govc vm.info -vm.ip <ip_address>
+```
+
+### Shutdown Guest OS
+```
+govc vm.power -s=true <vm_name>
+```
+
 ### Get VM moid
 
 ```
