@@ -21,8 +21,23 @@ govc vm.info -json -vm.ip <ip_address> | jq -r ".VirtualMachines[].Name"
 ```
 
 ### Shutdown Guest OS
+
 ```
 govc vm.power -s=true <vm_name>
+```
+
+### Get VM Power State
+
+```
+govc vm.info -json <vm_name> | jq -r ".VirtualMachines[].Runtime.PowerState"
+
+poweredOn, poweredOff
+```
+
+### Delete VM
+
+```
+govc vm.destroy <vm_name>
 ```
 
 ### Get VM moid
