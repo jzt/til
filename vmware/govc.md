@@ -17,7 +17,8 @@ govc vm.info -json vm_name | jq '.' | cat > outfile
 
 ```
 govc vm.info -vm.ip <ip_address>
-govc vm.info -json -vm.ip <ip_address> | jq -r ".VirtualMachines[].Name"```
+govc vm.info -json -vm.ip <ip_address> | jq -r ".VirtualMachines[].Name"
+```
 
 ### Shutdown Guest OS
 ```
