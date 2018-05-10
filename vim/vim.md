@@ -24,3 +24,9 @@ gqG
 ```
 :%s/\r//g
 ```
+
+### Replace literal \n with actual newline
+
+```
+:%s/\\n/\r/g
+```
