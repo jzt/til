@@ -37,3 +37,9 @@ iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 ```
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ```
+
+### Simple deny rule
+```
+iptables -A INPUT -p tcp --destination <ip> -j DENY
+iptables -A INPUT -p tcp --source <ip> -j DENY
+```
