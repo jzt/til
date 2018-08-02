@@ -49,3 +49,8 @@ openssl req \
     -out server.csr.pem \
     -subj "/C=US/ST=California/L=Los Angeles/O=Stark Enterprises/OU=Stark Enterprises Web Services/CN=example.com"
 ```
+
+### Decode CSR
+```
+openssl req -in server.csr.pem -noout -text
+```
