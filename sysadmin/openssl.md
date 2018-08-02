@@ -33,3 +33,19 @@ openssl x509 -outform der -in starkenterprises.io.cert.pem -out starkenterprises
 ```
 openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in starkenterprises.io.key.pem -out starkenterprises.io.key.pkcs8
 ```
+
+### Generate private key
+```
+# (private key is not encrypted - use -aes256 to specify a password)
+openssl genrsa -out server.key.pem 4096
+chmod 400 private/${SERVER_CERT_CN}.key.pem
+```
+
+### Generate server CSR
+```
+openssl req \
+    -new -sha256 \
+    -key server.key.pem \
+    -out server.csr.pem \
+    -subj "/C=US/ST=California/L=Los Angeles/O=Stark Enterprises/OU=Stark Enterprises Web Services/CN=example.com"
+```
