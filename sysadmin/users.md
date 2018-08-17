@@ -1,5 +1,10 @@
 # users
 
+### Add user
+```
+useradd <username>
+```
+
 ### Add user to group
 
 ```
