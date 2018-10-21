@@ -13,3 +13,9 @@ Python 3
 ```
 python3 -m http.server 8000
 ```
+
+## Virtualenv
+
+```
+python3 -m venv /path/to/venv
+```
