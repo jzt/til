@@ -11,6 +11,7 @@ sh get-docker.sh
 ```
 
 Register runner
-https://docs.gitlab.com/runner/register/
-https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
-https://docs.gitlab.com/runner/commands
+
+- https://docs.gitlab.com/runner/register/
+- https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+- https://docs.gitlab.com/runner/commands
