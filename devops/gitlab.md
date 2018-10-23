@@ -29,6 +29,14 @@ sudo gitlab-runner register -n \
   --name gitlab-runner-1
 ```
 
+Config for dind runner
+
+`/etc/gitlab-runner/config.toml`
+
+```
+volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+```
+
 Privileged runners need
 ```
 sudo usermod -aG docker gitlab-runner
