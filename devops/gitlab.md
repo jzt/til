@@ -28,3 +28,8 @@ sudo gitlab-runner register -n \
   --tag-list dind \
   --name gitlab-runner-1
 ```
+
+Privileged runners need
+```
+sudo usermod -aG docker gitlab-runner
+```
