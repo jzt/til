@@ -39,4 +39,9 @@ Gitlab runner config
 /etc/gitlab-runner/config.toml
 ```
 
+## Other admin actions
 
+Unregister runner
+```
+sudo gitlab-runner unregister -n gitlab-runner-1
+```
