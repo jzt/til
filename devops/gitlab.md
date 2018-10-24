@@ -10,6 +10,11 @@ curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 ```
 
+Privileged runners need
+```
+sudo usermod -aG docker gitlab-runner
+```
+
 Register runner
 
 - https://docs.gitlab.com/runner/register/
@@ -17,7 +22,6 @@ Register runner
 - https://docs.gitlab.com/runner/commands
 
 Register dind runner
-
 ```
 sudo gitlab-runner register -n \
   --url https://gitlab.com/ \
@@ -26,18 +30,13 @@ sudo gitlab-runner register -n \
   --docker-image "docker:stable" \
   --docker-privileged \
   --tag-list dind \
+  --docker-volumes /var/run/docker.sock:/var/run/docker.sock \
   --name gitlab-runner-1
 ```
 
-Config for dind runner
-
-`/etc/gitlab-runner/config.toml`
-
+Gitlab runner config
 ```
-volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+/etc/gitlab-runner/config.toml
 ```
 
-Privileged runners need
-```
-sudo usermod -aG docker gitlab-runner
-```
+
