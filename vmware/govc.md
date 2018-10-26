@@ -45,3 +45,10 @@ govc vm.destroy <vm_name>
 ```
 govc vm.info -dump -json vm_name | jq -c '.VirtualMachines[] | .Self.Value'
 ```
+
+## NTP
+```
+govc host.date.change -server pool.ntp.org
+govc host.service enable ntpd
+govc host.service start ntpd
+```
