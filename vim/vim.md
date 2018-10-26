@@ -30,3 +30,8 @@ gqG
 ```
 :%s/\\n/\r/g
 ```
+
+### Redo tabs
+```
+:retab
+```
