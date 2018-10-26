@@ -19,3 +19,10 @@ Add cert
 ```
 /usr/lib/vmware-vmafd/bin/dir-cli trustedcert publish --chain --cert ca.pem
 ```
+
+### Support Bundle
+```
+ssh root@<vcsa_ip>
+shell
+vc-support -l
+```
