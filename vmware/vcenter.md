@@ -26,3 +26,12 @@ ssh root@<vcsa_ip>
 shell
 vc-support -l
 ```
+
+### NTP
+```
+ntp.test --server pool.ntp.org
+ntp.set --servers pool.ntp.org
+ntp.get
+timesync.set --mode NTP
+timesyc.get
+```
