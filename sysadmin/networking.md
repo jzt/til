@@ -17,6 +17,7 @@ DNS=192.168.100.1
 systemctl enable systemd-networkd.service
 systemctl enable systemd-resolved.service
 ```
+Remove `iface eth0 inet dhcp` from `/etc/network/interfaces`
 
 ### Show routes
 ```
