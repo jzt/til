@@ -31,7 +31,7 @@ gqG
 :%s/\\n/\r/g
 ```
 
-### Redo tabs
+### Expand tabs and retab
 ```
-:retab
+:set et|retab
 ```
