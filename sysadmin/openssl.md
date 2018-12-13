@@ -54,3 +54,8 @@ openssl req \
 ```
 openssl req -in server.csr.pem -noout -text
 ```
+
+### Randomize MAC address for a particular interface
+```
+openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig <interface> ether
+```
